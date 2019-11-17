@@ -1,6 +1,10 @@
 <%-- 
     Document   : ExamPaper
+<<<<<<< HEAD
     Created on : Nov 17, 2019, 2:58:13 PM
+=======
+    Created on : Nov 17, 2019, 3:42:39 PM
+>>>>>>> master
     Author     : USER
 --%>
 
