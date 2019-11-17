@@ -24,7 +24,7 @@
             </a>
             <c:if test="${user != null}">
                 <span class="navbar-text">
-                    Welcome , ${user.fullname}
+                    Welcome : ${user.fullname}
                 </span>
             </c:if>
         </nav>

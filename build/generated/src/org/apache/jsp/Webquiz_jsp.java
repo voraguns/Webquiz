@@ -89,7 +89,7 @@ public final class Webquiz_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
-      out.write("\n");
+      out.write("        \n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
@@ -118,7 +118,7 @@ public final class Webquiz_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                <span class=\"navbar-text\">\n");
+        out.write("                <span class=\"navbar-text\"><\n");
         out.write("                    Welcome , ");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.fullname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("\n");
@@ -150,8 +150,7 @@ public final class Webquiz_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                    <p><a class=\"btn btn-primary btn-lg\" href=\"Signin\" role=\"button\">Sign in &raquo;</a>\n");
-        out.write("                        <a class=\"btn btn-primary btn-lg\" href=\"Signup\" role=\"button\">Sign up &raquo;</a></p>\n");
+        out.write("                    <p><a class=\"btn btn-primary btn-lg\" href=\"Signin\" role=\"button\">Sign in &raquo;</a></p>\n");
         out.write("                    ");
         int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
