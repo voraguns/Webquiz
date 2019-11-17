@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Course</title>
+        <title>Subject</title>
     </head>
     <body>
-        <h1>Course</h1>
+        <h1>Subject List</h1>
         <h2>${sessionScope.student.fullname}</h2>
         <hr>
         <a href="Science.jsp">Science Subject</a>
