@@ -8,6 +8,10 @@
         <servlet-name>WebquizServlet</servlet-name>
         <servlet-class>servlet.WebquizServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SubjectListServlet</servlet-name>
+        <servlet-class>servlet.SubjectListServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SigninServlet</servlet-name>
         <url-pattern>/Signin</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>WebquizServlet</servlet-name>
         <url-pattern>/Webquiz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubjectListServlet</servlet-name>
+        <url-pattern>/SubjectList</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -36,11 +36,10 @@
                     <br>It makes for teacher and student in school. 
                     <br>Use it as a starting point to create something more unique.</p>
                     <c:if test="${user == null}">
-                    <p><a class="btn btn-primary btn-lg" href="Signin" role="button">Sign in &raquo;</a>
-                        <a class="btn btn-primary btn-lg" href="Signup" role="button">Sign up &raquo;</a></p>
+                    <p><a class="btn btn-primary btn-lg" href="Signin" role="button">Sign in &raquo;</a></p>
                     </c:if>
             </div>
         </div>
-
+        
     </body>
 </html>
