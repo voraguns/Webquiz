@@ -12,6 +12,10 @@
         <servlet-name>SubjectListServlet</servlet-name>
         <servlet-class>servlet.SubjectListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>servlet.SignupServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SigninServlet</servlet-name>
         <url-pattern>/Signin</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>SubjectListServlet</servlet-name>
         <url-pattern>/SubjectList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/Signup</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
