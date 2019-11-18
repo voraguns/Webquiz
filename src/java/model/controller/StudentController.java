@@ -79,7 +79,15 @@ public class StudentController {
     }
     
     public void successsAndUpdateStudentDB(String fullname){
-        
+         try {
+            conn = BuildConnection.getConnection();
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO STUDENTS (Username, Password) VALUES (?, ?)");
+            ps.setString(1, fullname);
+            ResultSet rs = ps.executeQuery();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public static void main(String[] args) {
