@@ -22,7 +22,7 @@ public class BuildConnection {
         Connection conn = null;
         
         try {
-            conn = DriverManager.getConnection("jdbc:derby://localhost:1527/quiz", "quiz", "quiz");
+            conn = DriverManager.getConnection("jdbc:derby://localhost:1527/Webquiz", "adminna", "web2019");
         } catch (SQLException ex) {            
             Logger.getLogger(BuildConnection.class.getName()).log(Level.SEVERE,null, ex);
         }

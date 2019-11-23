@@ -1,25 +1,15 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/MyProject/Webquiz/web/Signin.jsp</file>
-            <file>file:/D:/MyProject/Webquiz/web/ExamPaper.jsp</file>
-            <file>file:/D:/MyProject/Webquiz/src/java/servlet/SigninServlet.java</file>
+            <file>file:/D:/MyProject/Webquiz/src/java/model/controller/StudentController.java</file>
+            <file>file:/D:/MyProject/Webquiz/src/java/servlet/SignupServlet.java</file>
             <file>file:/D:/MyProject/Webquiz/src/java/servlet/WebquizServlet.java</file>
-            <file>file:/D:/MyProject/Webquiz/web/Webquiz.jsp</file>
-            <file>file:/D:/MyProject/Webquiz/web/WEB-INF/web.xml</file>
-            <file>file:/D:/MyProject/Webquiz/web/SubjectList.jsp</file>
+            <file>file:/D:/MyProject/Webquiz/src/java/servlet/SubjectListServlet.java</file>
+            <file>file:/D:/MyProject/Webquiz/src/java/connection/BuildConnection.java</file>
+            <file>file:/D:/MyProject/Webquiz/src/java/model/controller/QuizController.java</file>
+            <file>file:/D:/MyProject/Webquiz/src/java/model/Students.java</file>
         </group>
     </open-files>
 </project-private>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
-    </open-files>
-</project-private>
->>>>>>> master

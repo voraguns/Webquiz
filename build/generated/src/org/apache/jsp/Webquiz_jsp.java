@@ -150,7 +150,8 @@ public final class Webquiz_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                    <p><a class=\"btn btn-primary btn-lg\" href=\"Signin\" role=\"button\">Sign in &raquo;</a></p>\r\n");
+        out.write("                    <p><a class=\"btn btn-primary btn-lg\" href=\"Signin\" role=\"button\">Sign in &raquo;</a>\r\n");
+        out.write("                     <a class=\"btn btn-primary btn-lg\" href=\"Signup\" role=\"button\">Sign up &raquo;</a></p>\r\n");
         out.write("                    ");
         int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

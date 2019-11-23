@@ -16,6 +16,16 @@ public class Teacher {
     private String password;
     private String fullname;
 
+    public Teacher() {
+    }
+
+    public Teacher(int id, String username, String password, String fullname) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.fullname = fullname;
+    }
+
     public int getId() {
         return id;
     }

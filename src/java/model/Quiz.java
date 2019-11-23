@@ -13,6 +13,11 @@ public class Quiz {
     public String question;
     public int answer;
 
+    public Quiz(String question, int answer) {
+        this.question = question;
+        this.answer = answer;
+    }
+
     public String getQuestion() {
         return question;
     }
@@ -29,11 +34,11 @@ public class Quiz {
         this.answer = answer;
     }
     
-    private void checkQuiz(){
+    public void checkQuiz(){
         
     }
     
-    private int viewPoint(){
-        return 0;
+    public void viewpoint(){
+        
     }
 }
