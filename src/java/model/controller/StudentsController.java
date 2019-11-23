@@ -10,89 +10,122 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.Student;
+import model.Students;
 
 /**
  *
  * @author GunPc
  */
-public class StudentController {
+public class StudentsController {
+    
+     private final static String FIND_BY_ID = "select * from students where studentid = ?";
+    private final static String FIND_BY_FIRSTNAME = "select * from students where firstname = ?";
+    private final static String FIND_BY_LASTNAME = "select * from students where lastname = ?";
+    private final static String FIND_BY_USERNAME = "select * from students where username = ?";
+    private final static String FIND_BY_PASSWORD = "select * from students where password = ?";
 
-    Connection conn;
-
-    public Student getStudentByUsername(String username) {
+    public Students findById(int studentid) {
+        Students student = null;
+        Connection conn = BuildConnection.getConnection();
         try {
-            conn = BuildConnection.getConnection();
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM students WHERE username = ?");
-            ps.setString(1, username);
-            ResultSet rs = ps.executeQuery();
+            PreparedStatement pstm = conn.prepareStatement(FIND_BY_ID);
+            pstm.setInt(1, studentid);
+            ResultSet rs = pstm.executeQuery();
             if (rs.next()) {
-                return new Student(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
+                student = ResultSetToStudent(rs);
             }
             rs.close();
             conn.close();
         } catch (SQLException ex) {
-            Logger.getLogger(StudentController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        return null;
+        return student;
     }
 
-    public Student getStudentById(int id) {
+    public Students findByFirstname(String firstname) {
+        Students student = null;
+        Connection conn = BuildConnection.getConnection();
         try {
-            conn = BuildConnection.getConnection();
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM students WHERE id = ?");
-            ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
+            PreparedStatement pstm = conn.prepareStatement(FIND_BY_FIRSTNAME);
+            pstm.setString(1, firstname);
+            ResultSet rs = pstm.executeQuery();
             if (rs.next()) {
-                return new Student(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
+                student = ResultSetToStudent(rs);
             }
             rs.close();
             conn.close();
         } catch (SQLException ex) {
-            Logger.getLogger(StudentController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        return null;
+        return student;
     }
-
-    public ArrayList<Student> getResultListStudent(ResultSet rs) throws SQLException {
-        ArrayList<Student> allStudent = new ArrayList();
-        allStudent.add(new Student(rs.getInt("id"), rs.getString("username"), rs.getString("password")));
-        return allStudent;
-
-    }
-
-    public ResultSet getStudentResult(ResultSet rs) {
+    
+     public Students findBylastname(String lastname) {
+        Students student = null;
+        Connection conn = BuildConnection.getConnection();
         try {
-            conn = BuildConnection.getConnection();
+            PreparedStatement pstm = conn.prepareStatement(FIND_BY_LASTNAME);
+            pstm.setString(1, lastname);
+            ResultSet rs = pstm.executeQuery();
             if (rs.next()) {
-                return (ResultSet) new Student(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
+                student = ResultSetToStudent(rs);
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentsController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return student;
+    }
+     
+       public Students findByUsername(String username) {
+        Students student = null;
+        Connection conn = BuildConnection.getConnection();
+        try {
+            PreparedStatement pstm = conn.prepareStatement(FIND_BY_USERNAME);
+            pstm.setString(1, username);
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                student = ResultSetToStudent(rs);
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentsController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return student;
+    }
+
+       public Students findByPassword(String password) {
+        Students student = null;
+        Connection conn = BuildConnection.getConnection();
+        try {
+            PreparedStatement pstm = conn.prepareStatement(FIND_BY_PASSWORD);
+            pstm.setString(1, password);
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                student = ResultSetToStudent(rs);
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentsController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return student;
+    }
+       
+    static Students ResultSetToStudent(ResultSet rs) {
+        try {
+            Students student = new Students(rs.getInt("STUDENTID"), rs.getString("FIRSTNAME"), rs.getString("LASTNAME"), rs.getString("USERNAME"), rs.getString("PASSWORD"));
+            if (student.getStudentid()!= 0) {
+                return student;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(StudentController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
     
-    public void successsAndUpdateStudentDB(String fullname){
-         try {
-            conn = BuildConnection.getConnection();
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO STUDENTS (Username, Password) VALUES (?, ?)");
-            ps.setString(1, fullname);
-            ResultSet rs = ps.executeQuery();
-
-        } catch (SQLException ex) {
-            Logger.getLogger(StudentController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    public static void main(String[] args) {
-        StudentController stc = new StudentController();
-        Student s = stc.getStudentById(1);
-        System.out.println(s);
-    }
 }

@@ -103,12 +103,14 @@ public class Students {
         return "Students{" + "studentid=" + studentid + ", firstname=" + firstname + ", lastname=" + lastname + '}';
     }
     
-    public void scccessAndUpdateDatabase(String username,String password){
+    public void scccessAndUpdateDatabase(Students students){
         try {
             BuildConnection db = new BuildConnection();
             Connection conn = db.getConnection();
             Statement stmt = conn.createStatement();
-            stmt.executeUpdate("INSERT INTO STUDENTS(studentid,firstname,lastname,username,password,fullname) VALUES ('"+studentid+"' , '"+firstname+"' , '"+lastname+"' ,'"+username+"','"+password+"','"+fullname+"')");
+            stmt.executeUpdate("INSERT INTO STUDENTS VALUES ('"+studentid+"' , '"+firstname+"' , '"+lastname+"' ,'"+username+"','"+password+"','"+fullname+"')");
+            conn.close();
+            stmt.close();
         } catch (SQLException ex) {
             Logger.getLogger(Students.class.getName()).log(Level.SEVERE, null, ex);
         }   

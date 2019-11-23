@@ -5,21 +5,13 @@
  */
 package servlet;
 
-import connection.BuildConnection;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.Students;
-import model.controller.StudentsController;
 
 /**
  *
@@ -38,29 +30,10 @@ public class SignupServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String studentid = request.getParameter("studentid");
-        String firstname = request.getParameter("firstname");
-        String lastname = request.getParameter("lastname");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        
-        if(studentid.isEmpty() || firstname.isEmpty() || firstname.isEmpty() || password.isEmpty() || username.isEmpty() || password.isEmpty()){
-            request.setAttribute("msg", "Please insert your Personal information.");
-            getServletContext().getRequestDispatcher("/Signup.jsp").forward(request, response);
-        } else {
-            Students user = new Students();
-            
-            
-            user.setUsername(username);
-            user.setPassword(password);
-            user.setFullname(username);
-            
-        }
-        
-
+       getServletContext().getRequestDispatcher("/Signup.jsp").forward(request, response);
     }
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
 
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -86,7 +59,25 @@ public class SignupServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/Signup.jsp").forward(request, response);
+        String studentid = request.getParameter("studentid");
+        String firstname = request.getParameter("firstname");
+        String lastname = request.getParameter("lastname");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        
+        if(studentid.isEmpty() || firstname.isEmpty() || firstname.isEmpty() || password.isEmpty() || username.isEmpty() || password.isEmpty()){
+            request.setAttribute("msg", "Please insert your Personal information.");
+            getServletContext().getRequestDispatcher("/Signup.jsp").forward(request, response);
+        } else {
+            Students user = new Students();
+          
+            user.setUsername(username);
+            user.setPassword(password);
+            user.setFullname(username);
+            user.scccessAndUpdateDatabase(user);
+            request.setAttribute("msg", "Your information have create in database successfully");
+            getServletContext().getRequestDispatcher("/Signup.jsp").forward(request, response);
+        }
     }
 
     /**
