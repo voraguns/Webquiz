@@ -10,7 +10,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.util.logging.PlatformLogger;
 
 /**
  *
@@ -18,18 +17,25 @@ import sun.util.logging.PlatformLogger;
  */
 public class BuildConnection {
     
-    public static Connection getConnection(){
+     private static final String DRIVER ="org.apache.derby.jdbc.ClientDriver";
+    private static final String URL = "jdbc:derby://localhost:1527/test";
+    private static final String USERNAME = "app";
+    private static final String PASSWORD = "app";
+
+    public static Connection getConnection() {
         Connection conn = null;
-        
+
         try {
-            conn = DriverManager.getConnection("jdbc:derby://localhost:1527/Webquiz", "adminna", "web2019");
-        } catch (SQLException ex) {            
-            Logger.getLogger(BuildConnection.class.getName()).log(Level.SEVERE,null, ex);
+            conn = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+        } catch (SQLException ex) {
+            Logger.getLogger(BuildConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return conn;
     }
-    
+
     public static void main(String[] args) {
-        System.out.println(BuildConnection.getConnection());
+
+        System.out.println(getConnection());
+
     }
 }

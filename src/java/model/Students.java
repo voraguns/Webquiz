@@ -27,9 +27,15 @@ public class Students {
     private String lastname;
     private String fullname;
 
-    public Students() {
+    public Students(String username, String password, String firstname, String lastname, String fullname) {
+        this.username = username;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.fullname = fullname;
     }
 
+    
     public Students(int studentid, String username, String password, String firstname, String lastname) {
         this.studentid = studentid;
         this.username = username;
@@ -38,17 +44,16 @@ public class Students {
         this.lastname = lastname;
     }
 
-    public Students(int studentid, String username, String password) {
+    public Students(int studentid, String username, String password, String firstname, String lastname, String fullname) {
         this.studentid = studentid;
         this.username = username;
         this.password = password;
-    }
-
-    public Students(String username, String password, String fullname) {
-        this.username = username;
-        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.fullname = fullname;
     }
+
+    
 
     public String getUsername() {
         return username;
@@ -101,20 +106,6 @@ public class Students {
     @Override
     public String toString() {
         return "Students{" + "studentid=" + studentid + ", firstname=" + firstname + ", lastname=" + lastname + '}';
-    }
-    
-    public void scccessAndUpdateDatabase(Students students){
-        try {
-            BuildConnection db = new BuildConnection();
-            Connection conn = db.getConnection();
-            Statement stmt = conn.createStatement();
-            stmt.executeUpdate("INSERT INTO STUDENTS VALUES ('"+studentid+"' , '"+firstname+"' , '"+lastname+"' ,'"+username+"','"+password+"','"+fullname+"')");
-            conn.close();
-            stmt.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(Students.class.getName()).log(Level.SEVERE, null, ex);
-        }   
-      
     }
     
 }

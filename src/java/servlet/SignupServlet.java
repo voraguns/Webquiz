@@ -7,10 +7,12 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.StudentDao;
 import model.Students;
 
 /**
@@ -59,25 +61,26 @@ public class SignupServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        System.out.println("firstname : " + request.getParameter("firstname"));
+        System.out.println("lastname : " + request.getParameter("lastname"));
+        System.out.println("username : " + request.getParameter("username"));
+        System.out.println("password : " + request.getParameter("password"));
+        
         String studentid = request.getParameter("studentid");
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String fullname = request.getParameter("fullname");
+    
+        Students user = new Students(username,password,firstname,lastname,fullname);
         
-        if(studentid.isEmpty() || firstname.isEmpty() || firstname.isEmpty() || password.isEmpty() || username.isEmpty() || password.isEmpty()){
-            request.setAttribute("msg", "Please insert your Personal information.");
-            getServletContext().getRequestDispatcher("/Signup.jsp").forward(request, response);
-        } else {
-            Students user = new Students();
-          
-            user.setUsername(username);
-            user.setPassword(password);
-            user.setFullname(username);
-            user.scccessAndUpdateDatabase(user);
-            request.setAttribute("msg", "Your information have create in database successfully");
-            getServletContext().getRequestDispatcher("/Signup.jsp").forward(request, response);
-        }
+        System.out.println(":: " + user.getFirstname());
+            
+        StudentDao register = new StudentDao();
+        register.AddClient(Integer.valueOf(studentid),firstname, lastname, username, password);
+      
     }
 
     /**
