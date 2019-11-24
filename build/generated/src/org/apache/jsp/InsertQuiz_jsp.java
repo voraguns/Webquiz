@@ -60,6 +60,10 @@ public final class InsertQuiz_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href=\"SubjectList.jsp\">Return to subject</a>\n");
       out.write("            <table>\n");
       out.write("                <tr>\n");
+      out.write("                    <td>Subject ID</td>\n");
+      out.write("                    <td><input type=\"text\" name=\"subjectid\"/></td>\n");
+      out.write("                </tr>\n");
+      out.write("                <tr>\n");
       out.write("                    <td>Quiz ID</td>\n");
       out.write("                    <td><input type=\"text\" name=\"quizid\"/></td>\n");
       out.write("                </tr>\n");

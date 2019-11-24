@@ -16,7 +16,7 @@
         <h1>Insert Quiz</h1>
         <hr>
         <form method="post" action="InsertQuiz">
-            <a href="SubjectList.jsp">Return to subject</a>
+            <a href="TeacherFunction.jsp">Return to menu</a>
             <table>
                 <tr>
                     <td>Subject ID</td>

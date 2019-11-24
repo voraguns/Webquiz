@@ -1,21 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-/**
- *
- * @author GunPc
- */
 public class Quiz {
-    public String question;
-    public int answer;
 
-    public Quiz(String question, int answer) {
+    private int quizid;
+    private String question;
+    private String choicea;
+    private String choiceb;
+    private String choicec;
+    private String choiced;
+    private String answer;
+
+    public Quiz(int quizid, String question, String choicea, String choiceb, String choicec, String choiced, String answer) {
+        this.quizid = quizid;
         this.question = question;
+        this.choicea = choicea;
+        this.choiceb = choiceb;
+        this.choicec = choicec;
+        this.choiced = choiced;
         this.answer = answer;
+    }
+
+    public Quiz(String question, String choicea, String choiceb, String choicec, String choiced, String answer) {
+        this.question = question;
+        this.choicea = choicea;
+        this.choiceb = choiceb;
+        this.choicec = choicec;
+        this.choiced = choiced;
+        this.answer = answer;
+    }
+
+    public int getQuizid() {
+        return quizid;
+    }
+
+    public void setQuizid(int quizid) {
+        this.quizid = quizid;
     }
 
     public String getQuestion() {
@@ -26,19 +45,49 @@ public class Quiz {
         this.question = question;
     }
 
-    public int getAnswer() {
+    public String getChoicea() {
+        return choicea;
+    }
+
+    public void setChoiceoa(String choicea) {
+        this.choicea = choicea;
+    }
+
+    public String getChoiceb() {
+        return choiceb;
+    }
+
+    public void setChoiceb(String choiceb) {
+        this.choiceb = choiceb;
+    }
+
+    public String getChoicec() {
+        return choicec;
+    }
+
+    public void setChoicec(String choicec) {
+        this.choicec = choicec;
+    }
+
+    public String getChoiced() {
+        return choiced;
+    }
+
+    public void setChoiced(String choiced) {
+        this.choiced = choiced;
+    }
+
+    public String getAnswer() {
         return answer;
     }
 
-    public void setAnswer(int answer) {
+    public void setAnswer(String answer) {
         this.answer = answer;
     }
-    
-    public void checkQuiz(){
-        
+
+    @Override
+    public String toString() {
+        return "Quiz{" + "quizid=" + quizid + ", quiestion=" + question + ", choiceoa=" + choicea + ", choiceb=" + choiceb + ", choicec=" + choicec + ", choiced=" + choiced + ", answer=" + answer + '}';
     }
-    
-    public void viewpoint(){
-        
-    }
+
 }
