@@ -11,20 +11,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Subject</title>
     </head>
+    
     <body>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="Webquiz">
                 <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                Webquiz
             </a>
-            <c:if test="${user != null}">
-                <span class="navbar-text"><
-                    Welcome , ${user.fullname}
+            <h1>Subject List</h1>
+                <span class="navbar-text">
+                    Welcome : ${user.fullname}
                 </span>
-            </c:if>
         </nav>
-        <h1>Subject List</h1>
-        <h2>${sessionScope.student.fullname}</h2>
         <hr>
         <a href="Science.jsp">Science Subject</a>
         <br>

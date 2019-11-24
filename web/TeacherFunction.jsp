@@ -12,8 +12,16 @@
         <title>Teacher Function</title>
     </head>
     <body>
-        <h1>Manage your quiz</h1>
-        <h2>Welcome Teacher : ${teacher.fullname}</h2>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="Webquiz">
+                <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                
+            </a> 
+            <h1>Manage your quiz</h1>       
+                <span class="navbar-text">
+                    Welcome : ${user.fullname}
+                </span>
+        </nav>
         <hr>
         <h3>Function List</h3>
         <br>
