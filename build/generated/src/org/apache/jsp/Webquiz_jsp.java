@@ -64,7 +64,7 @@ public final class Webquiz_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n");
       out.write("        <title>Webquiz</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body style=\"background-color: plum\">\n");
       out.write("        <!-- Image and text -->\n");
       out.write("        <nav class=\"navbar navbar-light bg-light\">\n");
       out.write("            <a class=\"navbar-brand\" href=\"Webquiz\">\n");

@@ -15,10 +15,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <title>Webquiz</title>
     </head>
-    <body>
+    <body style="background-color: lavender">
         <!-- Image and text -->
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="Webquiz">
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="Webquiz" style="color: whitesmoke">
                 <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                 Webquiz
             </a>
@@ -29,18 +29,24 @@
             </c:if>
         </nav>
 
-        <div class="jumbotron">
-            <div class="container">
+        <div class="jumbotron" style="align-items: center" >
+            <div class="container" style="color: teal ;background-color: gainsboro;border-style: double" >
+                <br>
+                <br>
                 <h1 class="display-3">Hello, Everybody!</h1>
+                <br>
                 <p>This is a template for education to create and do a exam website.
                     <br>It makes for teacher and student in school. 
                     <br>Use it as a starting point to create something more unique.</p>
                     <c:if test="${user == null}">
-                    <p><a class="btn btn-primary btn-lg" href="Signin" role="button">Sign in &raquo;</a>
-                        <a class="btn btn-primary btn-lg" href="Signup" role="button">Sign up &raquo;</a></p>
+                    <br>
+                    <p><a class="btn btn-primary btn-lg" href="Signin" role="button" style="background-color: lightblue;color: black">Sign in &raquo;</a>
+                        <a class="btn btn-primary btn-lg" href="Signup" role="button" style="background-color: lightblue;color: black">Sign up &raquo;</a></p>
+                    <br>
+                    <br>
                     </c:if>
             </div>
         </div>
-        
+
     </body>
 </html>
