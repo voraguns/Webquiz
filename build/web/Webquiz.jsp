@@ -22,11 +22,19 @@
                 <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                 Webquiz
             </a>
-            <c:if test="${user != null}">
-                <span class="navbar-text">
-                    Welcome : ${user.fullname}
+            <c:if test="${student != null}">
+                <span class="navbar-text" style="color: whitesmoke">
+                    Welcome : ${student.firstname} ${student.lastname}
+                    <a href="Logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Log out</a>
                 </span>
             </c:if>
+            <c:if test="${teacher != null}">
+                <span class="navbar-text" style="color: whitesmoke">
+                    Welcome : ${teacher.fullname}
+                    <a href="Logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Log out</a>
+                </span>
+            </c:if>
+
         </nav>
 
         <div class="jumbotron" style="align-items: center" >
@@ -38,13 +46,29 @@
                 <p>This is a template for education to create and do a exam website.
                     <br>It makes for teacher and student in school. 
                     <br>Use it as a starting point to create something more unique.</p>
-                    <c:if test="${user == null}">
+                    <c:if test="${student == null && teacher == null}">
                     <br>
-                    <p><a class="btn btn-primary btn-lg" href="Signin" role="button" style="background-color: lightblue;color: black">Sign in &raquo;</a>
-                        <a class="btn btn-primary btn-lg" href="Signup" role="button" style="background-color: lightblue;color: black">Sign up &raquo;</a></p>
+                    <p><a class="btn btn-primary btn-lg" href="LoginStudent" role="button" style="background-color: lightblue;color: black">Sign in (Student)&raquo;</a>
+                        <a class="btn btn-primary btn-lg" href="LoginTeacher" role="button" style="background-color: lightblue;color: black">Sign in (Teacher) &raquo;</a>
+                        <a class="btn btn-primary btn-lg" href="Signup" role="button" style="background-color: lightblue;color: black">Sign up &raquo;</a>
+                    </p>
                     <br>
+                </c:if>
+                <c:if test="${student != null}">
                     <br>
-                    </c:if>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="SubjectList" role="button" style="background-color: lightblue;color: black">Start Exam &raquo;</a>
+                    </p>
+                    <br>                   
+                </c:if>
+                <c:if test="${teacher != null}">
+                    <br>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="TeacherFunction" role="button" style="background-color: lightblue;color: black">Create Exam &raquo;</a>
+                    </p>
+                    <br>                   
+                </c:if>
+
             </div>
         </div>
 

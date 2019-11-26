@@ -1,19 +1,42 @@
 <%-- 
-    Document   : Login
-    Created on : Nov 15, 2019, 6:40:41 AM
+    Document   : Signup
+    Created on : Nov 18, 2019, 3:53:00 PM
     Author     : GunPc
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Quiz - Signin</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict'
+
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation')
+
+                    // Loop over them and prevent submission
+                    Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+                }, false)
+            }())
+
+        </script>
 
         <style>
             html,
@@ -31,7 +54,7 @@
                 background-color: #f5f5f5;
             }
 
-            .form-signin {
+            .form-signup {
                 width: 100%;
                 max-width: 420px;
                 padding: 15px;
@@ -123,6 +146,7 @@
                 }
             }
         </style>
+        <title>Quiz - Signup</title>
     </head>
     <body>
         <!-- Image and text -->
@@ -132,21 +156,25 @@
                 Webquiz
             </a>
         </nav>
-
-        <form class="form-signin" action="Signin" method="post">
+        
+         <form class="form-signup" action="LoginTeacher" method="post" oninput="fullname.value = firstname.value +' ' + lastname.value">
             <div class="text-center mb-4">
                 <img class="mb-4" src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <h1 class="h3 mb-3 font-weight-normal">Sign up for teacher account</h1>
+                <p>${msg}</p>
             </div>
+            
             <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-                <label for="inputEmail">Username</label>
+                <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username"  autofocus>
+                <label for="inputUsername">Username</label>
             </div>
 
             <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" autofocus>
                 <label for="inputPassword">Password</label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+         </form>
+
     </body>
 </html>

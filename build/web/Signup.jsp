@@ -176,7 +176,7 @@
                 <label for="inputFullname">Lastname</label>
             </div>
              <div class="form-label-group">
-                 <input type="text" id="inputFullname" name="fullname" class="form-control" placeholder="Fullname" required autofocus>
+                 <input type="text" id="inputFullname" name="fullname" class="form-control" placeholder="Fullname" required readonly autofocus>
                 <label for="inputFullname">Fullname</label>
             </div>
             <div class="form-label-group">

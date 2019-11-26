@@ -27,6 +27,9 @@ public class Students {
     private String lastname;
     private String fullname;
 
+    public Students() {
+    }
+
     public Students(String username, String password, String firstname, String lastname, String fullname) {
         this.username = username;
         this.password = password;

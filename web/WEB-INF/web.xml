@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <servlet>
-        <servlet-name>SigninServlet</servlet-name>
-        <servlet-class>servlet.SigninServlet</servlet-class>
-    </servlet>
+    <filter>
+        <filter-name>ProtectStudentAccesstoTeacherFunction</filter-name>
+        <filter-class>fillter.ProtectStudentAccesstoTeacherFunction</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ProtectStudentAccesstoTeacherFunction</filter-name>
+        <servlet-name>InsertQuizServlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
     <servlet>
         <servlet-name>WebquizServlet</servlet-name>
         <servlet-class>servlet.WebquizServlet</servlet-class>
@@ -20,10 +26,22 @@
         <servlet-name>InsertQuizServlet</servlet-name>
         <servlet-class>servlet.InsertQuizServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>SigninServlet</servlet-name>
-        <url-pattern>/Signin</url-pattern>
-    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginStudentServlet</servlet-name>
+        <servlet-class>servlet.LoginStudentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginTeacherServlet</servlet-name>
+        <servlet-class>servlet.LoginTeacherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TeacherFunctionServlet</servlet-name>
+        <servlet-class>servlet.TeacherFunctionServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>WebquizServlet</servlet-name>
         <url-pattern>/Webquiz</url-pattern>
@@ -39,6 +57,22 @@
     <servlet-mapping>
         <servlet-name>InsertQuizServlet</servlet-name>
         <url-pattern>/InsertQuiz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginStudentServlet</servlet-name>
+        <url-pattern>/LoginStudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginTeacherServlet</servlet-name>
+        <url-pattern>/LoginTeacher</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TeacherFunctionServlet</servlet-name>
+        <url-pattern>/TeacherFunction</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

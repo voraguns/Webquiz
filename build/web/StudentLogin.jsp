@@ -157,28 +157,13 @@
             </a>
         </nav>
 
-        <form class="form-signup" action="Signup" method="post" oninput="fullname.value = firstname.value +' ' + lastname.value">
+        <form class="form-signup" action="LoginStudent" method="post" oninput="fullname.value = firstname.value +' ' + lastname.value">
             <div class="text-center mb-4">
                 <img class="mb-4" src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-                <h1 class="h3 mb-3 font-weight-normal">Sign up your account</h1>
+                <h1 class="h3 mb-3 font-weight-normal">Sign up for student account</h1>
                 <p>${msg}</p>
             </div>
-             <div class="form-label-group">
-                 <input type="text" id="inputStudentID" name="studentid" class="form-control" placeholder="Your Student ID : 10xx" required autofocus>
-                <label for="inputStudentID">StudentID</label>
-            </div>
-            <div class="form-label-group">
-                 <input type="text" id="inputFirstname" name="firstname" class="form-control" placeholder="Firstname" required autofocus>
-                <label for="inputFullname">Firstname</label>
-            </div>
-            <div class="form-label-group">
-                 <input type="text" id="inputFirstname" name="lastname" class="form-control" placeholder="Lastname" required autofocus>
-                <label for="inputFullname">Lastname</label>
-            </div>
-             <div class="form-label-group">
-                 <input type="text" id="inputFullname" name="fullname" class="form-control" placeholder="Fullname" required readonly autofocus>
-                <label for="inputFullname">Fullname</label>
-            </div>
+            
             <div class="form-label-group">
                 <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required autofocus>
                 <label for="inputUsername">Username</label>
@@ -188,7 +173,7 @@
                 <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                 <label for="inputPassword">Password</label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
          </form>
     </body>
 </html>

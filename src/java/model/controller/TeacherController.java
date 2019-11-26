@@ -61,7 +61,7 @@ public class TeacherController {
        
         static Teacher ResultSetToStudent(ResultSet rs) {
         try {
-            Teacher teacher = new Teacher(rs.getInt("TEACHERID"), rs.getString("FULLNAME"), rs.getString("USERNAME"), rs.getString("PASSWORD"));
+            Teacher teacher = new Teacher(rs.getInt("TEACHERID"), rs.getString("USERNAME"), rs.getString("PASSWORD"), rs.getString("FULLNAME"));
             if (teacher.getId()!= 0) {
                 return teacher;
             }
