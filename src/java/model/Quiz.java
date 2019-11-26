@@ -9,8 +9,12 @@ public class Quiz {
     private String choicec;
     private String choiced;
     private String answer;
+    public int subjectid;
 
-    public Quiz(int quizid, String question, String choicea, String choiceb, String choicec, String choiced, String answer) {
+    public Quiz() {
+    }
+
+    public Quiz(int quizid, String question, String choicea, String choiceb, String choicec, String choiced, String answer, int subjectid) {
         this.quizid = quizid;
         this.question = question;
         this.choicea = choicea;
@@ -18,9 +22,15 @@ public class Quiz {
         this.choicec = choicec;
         this.choiced = choiced;
         this.answer = answer;
+        this.subjectid = subjectid;
+    }
+
+    public Quiz(int quizid) {
+        this.quizid = quizid;
     }
 
     public Quiz(String question, String choicea, String choiceb, String choicec, String choiced, String answer) {
+        
         this.question = question;
         this.choicea = choicea;
         this.choiceb = choiceb;
@@ -49,7 +59,7 @@ public class Quiz {
         return choicea;
     }
 
-    public void setChoiceoa(String choicea) {
+    public void setChoicea(String choicea) {
         this.choicea = choicea;
     }
 
@@ -85,9 +95,19 @@ public class Quiz {
         this.answer = answer;
     }
 
+    public int getSubjectid() {
+        return subjectid;
+    }
+
+    public void setSubjectid(int subjectid) {
+        this.subjectid = subjectid;
+    }
+
     @Override
     public String toString() {
-        return "Quiz{" + "quizid=" + quizid + ", quiestion=" + question + ", choiceoa=" + choicea + ", choiceb=" + choiceb + ", choicec=" + choicec + ", choiced=" + choiced + ", answer=" + answer + '}';
+        return "Quiz{" + "quizid=" + quizid + ", question=" + question + ", choicea=" + choicea + ", choiceb=" + choiceb + ", choicec=" + choicec + ", choiced=" + choiced + ", answer=" + answer + ", subjectid=" + subjectid + '}';
     }
+
+    
 
 }

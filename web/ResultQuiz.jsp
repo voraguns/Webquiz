@@ -1,13 +1,3 @@
-<%-- 
-    Document   : ExamPaper
-<<<<<<< HEAD
-    Created on : Nov 17, 2019, 2:58:13 PM
-=======
-    Created on : Nov 17, 2019, 3:42:39 PM
->>>>>>> master
-    Author     : USER
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,6 +6,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Exam Paper</h1>
+        
+        <h1>Result Quiz</h1>
+        <a href="SubjectList.jsp">Return to subject</a><hr>
+       
     </body>
 </html>

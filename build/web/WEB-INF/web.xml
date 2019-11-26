@@ -42,6 +42,30 @@
         <servlet-name>TeacherFunctionServlet</servlet-name>
         <servlet-class>servlet.TeacherFunctionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EnglishServlet</servlet-name>
+        <servlet-class>servlet.EnglishServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MathematicsServlet</servlet-name>
+        <servlet-class>servlet.MathematicsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ResultQuizServlet</servlet-name>
+        <servlet-class>servlet.ResultQuizServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ScienceServlet</servlet-name>
+        <servlet-class>servlet.ScienceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SocialStudiesServlet</servlet-name>
+        <servlet-class>servlet.SocialStudiesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ThaiServlet</servlet-name>
+        <servlet-class>servlet.ThaiServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>WebquizServlet</servlet-name>
         <url-pattern>/Webquiz</url-pattern>
@@ -73,6 +97,30 @@
     <servlet-mapping>
         <servlet-name>TeacherFunctionServlet</servlet-name>
         <url-pattern>/TeacherFunction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnglishServlet</servlet-name>
+        <url-pattern>/English</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MathematicsServlet</servlet-name>
+        <url-pattern>/Mathematics</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResultQuizServlet</servlet-name>
+        <url-pattern>/ResultQuiz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ScienceServlet</servlet-name>
+        <url-pattern>/Science</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SocialStudiesServlet</servlet-name>
+        <url-pattern>/SocialStudies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ThaiServlet</servlet-name>
+        <url-pattern>/Thai</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Quiz;
-import model.QuizDao;
+import model.controller.QuizController;
+
 
 public class InsertQuizServlet extends HttpServlet {
 
@@ -40,12 +41,13 @@ public class InsertQuizServlet extends HttpServlet {
         String choicec = request.getParameter("choicec");
         String choiced = request.getParameter("choiced");
         String answer = request.getParameter("answer");
+        String subjectid = request.getParameter("subjectid");
 
         Quiz q = new Quiz( question, choicea, choiceb, choicec, choiced, answer);
         System.out.println(":: " + q.getQuizid());
 
-        QuizDao quizdao = new QuizDao();
-        quizdao.insertQuiz(Integer.valueOf(quizid), question, choicea, choiceb, choicec, choiced, answer);
+        QuizController qc = new QuizController();
+        qc.insertQuiz(Integer.valueOf(quizid),question,choicea,choiceb,choicec,choiced,answer,Integer.valueOf(subjectid));
         System.out.println("Insert Success");
         getServletContext().getRequestDispatcher("/InsertQuiz.jsp").forward(request, response);
     }

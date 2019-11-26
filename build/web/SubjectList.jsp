@@ -31,11 +31,11 @@
             <h3 style="color: lightgrey">Welcome : ${student.firstname} ${student.lastname}</h3>
         </nav>
         <table  border="5" width="100%" style="text-align: center;border-style: ridge ;background-color: whitesmoke">
-            <th><a href="Thai.jsp"title="Thai" style="color: black">Thai Subject</a></th>
-            <th><a href="English.jsp"title="English"style="color: black">English Subject</a></th>
-            <th><a href="Science.jsp" title="Science"style="color: black">Science Subject</a></th>
-            <th><a href="Mathematics.jsp"title="Math"style="color: black">Math Subject</a></th>
-            <th><a href="SocialStudies.jsp"title="Social Studies"style="color: black">Social Studies Subject</a></th>
+            <th><a href="Thai"title="Thai" style="color: black">Thai Subject</a></th>
+            <th><a href="English"title="English"style="color: black">English Subject</a></th>
+            <th><a href="Science" title="Science"style="color: black">Science Subject</a></th>
+            <th><a href="Mathematics"title="Math"style="color: black">Math Subject</a></th>
+            <th><a href="SocialStudies"title="Social Studies"style="color: black">Social Studies Subject</a></th>
         </table>
     </body>
 </html>
