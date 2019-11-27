@@ -164,7 +164,7 @@
                 <p>${msg}</p>
             </div>
              <div class="form-label-group">
-                 <input type="text" id="inputStudentID" name="studentid" class="form-control" placeholder="Your Student ID : 10xx" required autofocus>
+                 <input type="text" id="inputStudentID" name="studentid" class="form-control" placeholder="Your Student ID : 10xx" required minlength="10" maxlength="10" autofocus>
                 <label for="inputStudentID">StudentID</label>
             </div>
             <div class="form-label-group">

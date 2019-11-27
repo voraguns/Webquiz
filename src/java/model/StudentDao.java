@@ -52,14 +52,14 @@ public class StudentDao {
         return "Oops.. Something went wrong there..!";  // On failure, send a message from here.
     }
     
-        public int AddClient(int studentid,String firstname, String lastname, String username, String password) {
+        public int AddClient(long studentid,String firstname, String lastname, String username, String password) {
 
         Connection conn = BuildConnection.getConnection();
         int status = -1;
         try {
             String ADD = "INSERT INTO STUDENTS(studentid,firstname,lastname,username,password) VALUES (?,?,?,?,?)";
             PreparedStatement pstm = conn.prepareStatement(ADD); 
-            pstm.setInt(1, studentid);
+            pstm.setLong(1, studentid);
             pstm.setString(2, firstname);
             pstm.setString(3, lastname);
             pstm.setString(4, username);

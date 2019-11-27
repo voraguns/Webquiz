@@ -80,7 +80,7 @@ public class SignupServlet extends HttpServlet {
         System.out.println(":: " + user.getFirstname());
             
         StudentDao register = new StudentDao();
-        register.AddClient(Integer.valueOf(studentid),firstname, lastname, username, password);
+        register.AddClient(Long.parseLong(studentid),firstname, lastname, username, password);
         HttpSession session = request.getSession();
         session.setAttribute("student", user);
         getServletContext().getRequestDispatcher("/SubjectList.jsp").forward(request, response);

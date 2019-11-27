@@ -20,8 +20,8 @@ import model.Teacher;
  */
 public class TeacherController {
 
-    private final static String FIND_BY_USERNAME = "select * from teacher where username = ?";
-    private final static String FIND_BY_PASSWORD = "select * from teacher where password = ?";
+    private final static String FIND_BY_USERNAME = "select * from teachers where username = ?";
+    private final static String FIND_BY_PASSWORD = "select * from teachers where password = ?";
     
     public Teacher findByUsername(String username) {
         Teacher teacher = null;
