@@ -158,33 +158,37 @@
             </a>
         </nav>
 
-        <form class="form-signup" action="Signup" method="post" oninput="fullname.value = firstname.value +' ' + lastname.value">
+        <form class="form-signup" action="InsertQuiz" method="post" oninput="fullname.value = firstname.value +' ' + lastname.value">
             <div class="text-center mb-4">
                 <h1 class="h3 mb-3 font-weight-normal">Insert your quiz</h1>
                 <p>${msg}</p>
             </div>
              <div class="form-label-group">
-                 <input type="text" id="inputsubjectID" name="subjectID" class="form-control" required autofocus>
+                 <input type="text" id="inputsubjectID" name="subjectid" class="form-control" required autofocus>
                 <label for="inputsubjectID">Subject ID : </label>
             </div>
             <div class="form-label-group">
-                 <input type="text" id="inputquizID" name="quizID" class="form-control" required autofocus>
+                 <input type="text" id="inputquizID" name="quizid" class="form-control" required autofocus>
                 <label for="inputquizID">Quiz ID : </label>
             </div>
             <div class="form-label-group">
-                 <input type="text" id="inputchoice1" name="choice1" class="form-control" required autofocus>
+                 <input type="text" id="inputQuestion" name="question" class="form-control" required autofocus>
+                <label for="inputQuestion">Question : </label>
+            </div>
+            <div class="form-label-group">
+                 <input type="text" id="inputchoice1" name="choicea" class="form-control" required autofocus>
                 <label for="inputchoice1">Choice 1 : </label>
             </div>
             <div class="form-label-group">
-                 <input type="text" id="inputchoice2" name="choice2" class="form-control" required autofocus>
+                 <input type="text" id="inputchoice2" name="choiceb" class="form-control" required autofocus>
                 <label for="inputchoice2">Choice 2 : </label>
             </div>
             <div class="form-label-group">
-                 <input type="text" id="inputchoice3" name="choice3" class="form-control" required autofocus>
+                 <input type="text" id="inputchoice3" name="choicec" class="form-control" required autofocus>
                 <label for="inputchoice3">Choice 3 : </label>
             </div>
             <div class="form-label-group">
-                 <input type="text" id="inputchoice4" name="choice4" class="form-control" required autofocus>
+                 <input type="text" id="inputchoice4" name="choiced" class="form-control" required autofocus>
                 <label for="inputchoice4">Choice 4 : </label>
             </div>
             <div class="form-label-group">
