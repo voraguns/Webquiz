@@ -14,13 +14,20 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Quiz;
+import model.Teacher;
+import static model.controller.TeacherController.ResultSetToStudent;
 
 /**
  *
  * @author GunPc
  */
 public class QuizController {
+    
+        private final static String FIND_QUIZ_BY_ANSWER = "select * from quiz  where answer = ?";
+        
     public String quizList(Quiz quizs) {
+        
+        
         int quizid = quizs.getQuizid();
         String question = quizs.getQuestion();
         String choicea = quizs.getChoicea();
@@ -53,6 +60,24 @@ public class QuizController {
             e.printStackTrace();
         }
         return "Something went wrong";
+    }
+    
+     public Quiz findByAnswer(String answer) {
+        Quiz quiz = null;
+        Connection conn = BuildConnection.getConnection();
+        try {
+            PreparedStatement pstm = conn.prepareStatement(FIND_QUIZ_BY_ANSWER);
+            pstm.setString(1, answer);
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                quiz = new Quiz(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getInt(8));
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TeacherController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return quiz;
     }
 
 //เพิ่มคำถาม
@@ -206,8 +231,38 @@ public class QuizController {
         }
         return status;
     }
+    
+//     static Teacher ResultSetToQuiz(ResultSet rs) {
+//        try {
+//            Quiz quiz = new Quiz(rs.getInt());
+//            if (quiz.getQuizid()!= 0) {
+//                return quiz;
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(QuizController.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        return null;
+//    }
+    
 //ไม่น่าถูก
-    public Quiz getResultBySubjectId(int subjectid){
+//    public Quiz getResultBySubjectId(int subjectid){
+//        Quiz quiz=null;
+//        Connection c = BuildConnection.getConnection();
+//        try {
+//            PreparedStatement pstm=c.prepareStatement("SELECT * FROM QUIZ WHERE subjectid =?");
+//            pstm.setInt(1, subjectid);
+//            ResultSet rs=pstm.executeQuery();
+//            while(rs.next()){
+//                quiz=new Quiz(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)
+//                ,rs.getString(6),rs.getString(7),rs.getInt(8));
+//                System.out.println(quiz);
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Quiz.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        return quiz;
+//    }
+        public Quiz getResultBySubjectId(int subjectid){
         Quiz quiz=null;
         Connection c = BuildConnection.getConnection();
         try {
@@ -224,26 +279,7 @@ public class QuizController {
         }
         return quiz;
     }
-    
-//        public Quiz getResultBySubjectId(int subjectid){
-//        Quiz quiz=null;
-//        Connection c = BuildConnection.getConnection();
-//        try {
-//            PreparedStatement pstm=c.prepareStatement("SELECT * FROM QUIZ WHERE subjectid =?");
-//            pstm.setInt(1, subjectid);
-//            int score = 0;
-//            if()
-////            ResultSet rs=pstm.executeQuery();
-////            while(rs.next()){
-////                quiz=new Quiz(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)
-////                ,rs.getString(6),rs.getString(7),rs.getInt(8));
-////                System.out.println(quiz);
-////            }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(QuizDao.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        return quiz;
-//    }
+
 
 
 //    public static void viewPoint(Quiz[] quiz) {

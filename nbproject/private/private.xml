@@ -2,6 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/servlet/LoginStudentServlet.java</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/model/controller/StudentsController.java</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/model/Students.java</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/model/test.java</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/web/Webquiz.jsp</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/web/SubjectList.jsp</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/servlet/SignupServlet.java</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/web/Signup.jsp</file>
+            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/model/StudentDao.java</file>
+        </group>
     </open-files>
 </project-private>

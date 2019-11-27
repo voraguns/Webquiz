@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public class Students {
     
     
-    private int studentid;
+    private String studentid;
     private String username;
     private String password;
     private String firstname;
@@ -29,17 +29,17 @@ public class Students {
 
     public Students() {
     }
-
-    public Students(String username, String password, String firstname, String lastname, String fullname) {
-        this.username = username;
-        this.password = password;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.fullname = fullname;
-    }
+//
+//    public Students(String username, String password, String firstname, String lastname, String fullname) {
+//        this.username = username;
+//        this.password = password;
+//        this.firstname = firstname;
+//        this.lastname = lastname;
+//        this.fullname = fullname;
+//    }
 
     
-    public Students(int studentid, String username, String password, String firstname, String lastname) {
+    public Students(String studentid, String username, String password, String firstname, String lastname) {
         this.studentid = studentid;
         this.username = username;
         this.password = password;
@@ -47,7 +47,7 @@ public class Students {
         this.lastname = lastname;
     }
 
-    public Students(int studentid, String username, String password, String firstname, String lastname, String fullname) {
+    public Students(String studentid, String username, String password, String firstname, String lastname, String fullname) {
         this.studentid = studentid;
         this.username = username;
         this.password = password;
@@ -74,7 +74,7 @@ public class Students {
         this.password = password;
     }
 
-    public int getStudentid() {
+    public String getStudentid() {
         return studentid;
     }
 
@@ -94,7 +94,7 @@ public class Students {
         this.fullname = fullname;
     }
 
-    public void setStudentid(int studentid) {
+    public void setStudentid(String studentid) {
         this.studentid = studentid;
     }
 
@@ -108,7 +108,9 @@ public class Students {
 
     @Override
     public String toString() {
-        return "Students{" + "studentid=" + studentid + ", firstname=" + firstname + ", lastname=" + lastname + '}';
+        return "Students{" + "studentid=" + studentid + ", firstname=" + firstname + ", lastname=" + lastname + ", username=" + username + ", password=" + password + '}';
     }
+
+    
     
 }

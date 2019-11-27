@@ -76,12 +76,12 @@ public class SignupServlet extends HttpServlet {
         String password = request.getParameter("password");
         String fullname = request.getParameter("fullname");
     
-        Students user = new Students(username,password,firstname,lastname,fullname);
+        Students user = new Students(studentid,username,password,firstname,lastname);
         
         System.out.println(":: " + user.getFirstname());
             
         StudentDao register = new StudentDao();
-        register.AddClient(Long.parseLong(studentid),firstname, lastname, username, password);
+        register.AddClient(studentid,firstname, lastname, username, password);
         HttpSession session = request.getSession();
         session.setAttribute("student", user);
         getServletContext().getRequestDispatcher("/SubjectList.jsp").forward(request, response);

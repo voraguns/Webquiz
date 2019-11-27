@@ -118,8 +118,8 @@ public class StudentsController {
        
     static Students ResultSetToStudent(ResultSet rs) {
         try {
-            Students student = new Students(rs.getInt("STUDENTID"), rs.getString("FIRSTNAME"), rs.getString("LASTNAME"), rs.getString("USERNAME"), rs.getString("PASSWORD"));
-            if (student.getStudentid()!= 0) {
+            Students student = new Students(rs.getString("STUDENTID"),rs.getString("USERNAME"), rs.getString("PASSWORD"), rs.getString("FIRSTNAME"), rs.getString("LASTNAME"));
+            if (student.getStudentid() != null ||! student.getStudentid().isEmpty() ) {
                 return student;
             }
         } catch (SQLException ex) {

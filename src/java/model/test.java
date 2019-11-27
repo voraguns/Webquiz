@@ -13,7 +13,7 @@ public class test {
 
     public static void main(String[] args) {
         StudentDao sd = new StudentDao();
-        sd.AddClient(1,"mint","prem","mint","1234");
+        sd.AddClient("1","mint","prem","mint","1234");
 
     }
 

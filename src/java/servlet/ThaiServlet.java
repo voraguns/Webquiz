@@ -23,10 +23,13 @@ public class ThaiServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String[] answer = request.getParameterValues("answer");
+        
         QuizController qc = new QuizController();
         ArrayList<Quiz> quizs = null;
         try {
             quizs = qc.listQuizThai();
+            qc.findByAnswer(answer);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -9,6 +9,5 @@
         
         <h1>Result Quiz</h1>
         <a href="SubjectList.jsp">Return to subject</a><hr>
-       
     </body>
 </html>
