@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/servlet/LogoutServlet.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/model/Teacher.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/web/InsertQuiz.jsp</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/servlet/InsertQuizServlet.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/model/controller/QuizController.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/servlet/EnglishServlet.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/web/Webquiz.jsp</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/model/controller/TeacherController.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/web/Thai.jsp</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/connection/BuildConnection.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/servlet/SignupServlet.java</file>
-            <file>file:/C:/Users/GunPc/Desktop/Project%20พวกเรา/project%20quiz/project%20quiz/Webquiz/src/java/servlet/ThaiServlet.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

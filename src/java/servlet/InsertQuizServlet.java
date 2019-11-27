@@ -32,6 +32,7 @@ public class InsertQuizServlet extends HttpServlet {
         System.out.println("Choine 2 : " + request.getParameter("choiceb"));
         System.out.println("Choine 3 : " + request.getParameter("choicec"));
         System.out.println("Choine 4 : " + request.getParameter("choiced"));
+        System.out.println("subjectID : " + request.getParameter("subjectid"));
         System.out.println("Answer: " + request.getParameter("answer"));
 
         String quizid = request.getParameter("quizid");

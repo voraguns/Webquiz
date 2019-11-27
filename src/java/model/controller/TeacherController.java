@@ -1,4 +1,4 @@
-/*
+/* /////
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -20,8 +20,8 @@ import model.Teacher;
  */
 public class TeacherController {
 
-    private final static String FIND_BY_USERNAME = "select * from TEACHERS where username = ?";
-    private final static String FIND_BY_PASSWORD = "select * from TEACHER Swhere password = ?";
+    private final static String FIND_BY_USERNAME = "select * from teachers where username = ?";
+    private final static String FIND_BY_PASSWORD = "select * from teachers where password = ?";
     
     public Teacher findByUsername(String username) {
         Teacher teacher = null;
