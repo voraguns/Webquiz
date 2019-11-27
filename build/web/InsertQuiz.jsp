@@ -167,10 +167,7 @@
                  <input type="text" id="inputsubjectID" name="subjectid" class="form-control" required autofocus>
                 <label for="inputsubjectID">Subject ID : </label>
             </div>
-            <div class="form-label-group">
-                 <input type="text" id="inputquizID" name="quizid" class="form-control" required autofocus>
-                <label for="inputquizID">Quiz ID : </label>
-            </div>
+ 
              <div class="form-label-group">
                  <input type="text" id="inputQuestion" name="question" class="form-control" required autofocus>
                 <label for="inputQuestion">Question : </label>

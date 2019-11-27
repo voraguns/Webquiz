@@ -56,20 +56,19 @@ public class QuizController {
     }
 
 //เพิ่มคำถาม
-    public int insertQuiz(int quizid, String question, String choicea, String choiceb, String choicec, String choiced, String answer, int subjectid) {
+    public int insertQuiz(String question, String choicea, String choiceb, String choicec, String choiced, String answer, int subjectid) {
         Connection c = BuildConnection.getConnection();
         int status = -1;
         try {
-            String sql = "INSERT INTO WQ.QUIZ (quizid,question,choicea,choiceb,choicec,choiced,answer,subjectid) VALUES (?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO APP.QUIZ (question,choicea,choiceb,choicec,choiced,answer,subjectid) VALUES (?,?,?,?,?,?,?)";
             PreparedStatement pstm = c.prepareStatement(sql);
-            pstm.setInt(1, quizid);
-            pstm.setString(2, question);
-            pstm.setString(3, choicea);
-            pstm.setString(4, choiceb);
-            pstm.setString(5, choicec);
-            pstm.setString(6, choiced);
-            pstm.setString(7, answer);
-            pstm.setInt(8, subjectid);
+            pstm.setString(1, question);
+            pstm.setString(2, choicea);
+            pstm.setString(3, choiceb);
+            pstm.setString(4, choicec);
+            pstm.setString(5, choiced);
+            pstm.setString(6, answer);
+            pstm.setInt(7, subjectid);
 
             status = pstm.executeUpdate();
             c.commit();
@@ -258,7 +257,7 @@ public class QuizController {
     public static void main(String[] args) {
         QuizController qc = new QuizController();
 //        qd.listQuiz();
-        qc.insertQuiz(5012, "Orange", "a", "b", "c", "Orange", "Orange", 501);
+        qc.insertQuiz("Orange", "a", "b", "c", "Orange", "Orange", 501);
 //        qd.deleteQuiz(1013);
 //        qd.getResultBySubjectId(101);
 }

@@ -7,7 +7,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Do Quizs 5555</h1>
+        <h1>Do Quizs</h1>
         <h2>Mathematics</h2>
         <h4 style="color: red">${smg}</h4>
         <form method="post" action="Mathematics">

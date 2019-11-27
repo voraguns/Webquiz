@@ -36,6 +36,7 @@ public class ProtectTeacherAccesstoStudentExamPaper implements Filter {
         HttpSession session = ((HttpServletRequest)(request)).getSession();
         if(session == null || session.getAttribute("student")==null){
              config.getServletContext().getRequestDispatcher("/StudentLogin.jsp").forward(request, response);
+             return;
         }
         chain.doFilter(request, response);
     }

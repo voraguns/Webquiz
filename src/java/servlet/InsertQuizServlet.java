@@ -48,7 +48,7 @@ public class InsertQuizServlet extends HttpServlet {
         System.out.println(":: " + q.getQuizid());
 
         QuizController qc = new QuizController();
-        qc.insertQuiz(Integer.valueOf(quizid),question,choicea,choiceb,choicec,choiced,answer,Integer.valueOf(subjectid));
+        qc.insertQuiz(question,choicea,choiceb,choicec,choiced,answer,Integer.valueOf(subjectid));
         System.out.println("Insert Success");
         getServletContext().getRequestDispatcher("/InsertQuiz.jsp").forward(request, response);
     }
