@@ -18,9 +18,9 @@ import java.util.logging.Logger;
 public class BuildConnection {
     
      private static final String DRIVER ="org.apache.derby.jdbc.ClientDriver";
-    private static final String URL = "jdbc:derby://localhost:1527/Webquiz";
-    private static final String USERNAME = "adminna";
-    private static final String PASSWORD = "web2019";
+    private static final String URL = "jdbc:derby://localhost:1527/WQ";
+    private static final String USERNAME = "app";
+    private static final String PASSWORD = "app";
 
     public static Connection getConnection() {
         Connection conn = null;

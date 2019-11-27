@@ -60,7 +60,7 @@ public class QuizController {
         Connection c = BuildConnection.getConnection();
         int status = -1;
         try {
-            String sql = "INSERT INTO QUIZ.QUIZ (quizid,question,choicea,choiceb,choicec,choiced,answer,subjectid) VALUES (?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO WQ.QUIZ (quizid,question,choicea,choiceb,choicec,choiced,answer,subjectid) VALUES (?,?,?,?,?,?,?,?)";
             PreparedStatement pstm = c.prepareStatement(sql);
             pstm.setInt(1, quizid);
             pstm.setString(2, question);

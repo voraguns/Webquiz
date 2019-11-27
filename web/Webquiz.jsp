@@ -22,17 +22,25 @@
                 <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                 Webquiz
             </a>
-            <c:if test="${student != null}">
+            <c:if test="${student != null && teacher == null}">
                 <span class="navbar-text" style="color: whitesmoke">
                     Welcome : ${student.firstname} ${student.lastname}
                     <a href="Logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Log out</a>
                 </span>
             </c:if>
-            <c:if test="${teacher != null}">
+            <c:if test="${teacher != null && student == null}">
                 <span class="navbar-text" style="color: whitesmoke">
                     Welcome : ${teacher.fullname}
                     <a href="Logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Log out</a>
                 </span>
+            </c:if>
+            <c:if test="${student != null && teacher != null}">
+                <c:if test="${student != null}">
+                    <span class="navbar-text" style="color: whitesmoke">
+                        Welcome : ${student.firstname} ${student.lastname}
+                        <a href="Logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Log out</a>
+                    </span>
+                </c:if>
             </c:if>
 
         </nav>
@@ -54,19 +62,26 @@
                     </p>
                     <br>
                 </c:if>
-                <c:if test="${student != null}">
+                <c:if test="${student != null && teacher == null}">
                     <br>
                     <p>
                         <a class="btn btn-primary btn-lg" href="SubjectList" role="button" style="background-color: lightblue;color: black">Start Exam &raquo;</a>
                     </p>
                     <br>                   
                 </c:if>
-                <c:if test="${teacher != null}">
+                <c:if test="${teacher != null && student == null}">
                     <br>
                     <p>
                         <a class="btn btn-primary btn-lg" href="TeacherFunction" role="button" style="background-color: lightblue;color: black">Create Exam &raquo;</a>
                     </p>
                     <br>                   
+                </c:if>
+                <c:if test="${teacher != null && student != null}">
+                    <br>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="SubjectList" role="button" style="background-color: lightblue;color: black">Start Exam &raquo;</a>
+                    </p>
+                    <br> 
                 </c:if>
 
             </div>

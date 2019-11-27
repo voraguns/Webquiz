@@ -20,8 +20,8 @@ import model.Teacher;
  */
 public class TeacherController {
 
-    private final static String FIND_BY_USERNAME = "select * from teacher where username = ?";
-    private final static String FIND_BY_PASSWORD = "select * from teacher where password = ?";
+    private final static String FIND_BY_USERNAME = "select * from TEACHERS where username = ?";
+    private final static String FIND_BY_PASSWORD = "select * from TEACHER Swhere password = ?";
     
     public Teacher findByUsername(String username) {
         Teacher teacher = null;
@@ -61,7 +61,7 @@ public class TeacherController {
        
         static Teacher ResultSetToStudent(ResultSet rs) {
         try {
-            Teacher teacher = new Teacher(rs.getInt("TEACHERID"), rs.getString("USERNAME"), rs.getString("PASSWORD"), rs.getString("FULLNAME"));
+            Teacher teacher = new Teacher(rs.getInt("TEACHERID"),  rs.getString("FULLNAME"), rs.getString("USERNAME"), rs.getString("PASSWORD"));
             if (teacher.getId()!= 0) {
                 return teacher;
             }

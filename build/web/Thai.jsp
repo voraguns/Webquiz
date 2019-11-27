@@ -11,7 +11,7 @@
         <h2>Thai</h2>
         <h4 style="color: red">${smg}</h4>
         <form method="post" action="Thai">
-            <a href="SubjectList.jsp">Return to subject</a><hr>
+            <a href="SubjectList">Return to subject</a><hr>
             <c:forEach items='${Quiz}' var='q'>
                 <h3>${q.getQuestion()}?</h3>
                 <div class="answer">

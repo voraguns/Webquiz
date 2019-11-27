@@ -34,6 +34,7 @@ public class LogoutServlet extends HttpServlet {
         if (session != null || session.getAttribute("student") != null || session.getAttribute("teacher") != null) {
             session.invalidate();
             getServletContext().getRequestDispatcher("/Webquiz.jsp").forward(request, response);
+            return;
         }
         getServletContext().getRequestDispatcher("/Webquiz.jsp").forward(request, response);
     }
